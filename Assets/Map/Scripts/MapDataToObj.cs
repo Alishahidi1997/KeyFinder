@@ -27,7 +27,7 @@ public class MapDataToObj : MonoBehaviour
         ground = GameObject.FindWithTag("Ground");
         wallPool = GameObject.FindWithTag("Wall");
         obstaclePool = GameObject.FindWithTag("Obstacle");
-        Keys = GameObject.FindWithTag("Key");
+        Keys = GameObject.FindWithTag("KeyPool");
         player = GameObject.FindWithTag("Player"); 
         mapObject.Print2DList();
         AddFloorTileToTheWorld(); 
