@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class ScoreHandler : MonoBehaviour
 {
 
     private int score = 0;
+    private int numberOfKeys = 3; 
 
     private TMP_Text scoreBoard;
     public int Score
@@ -16,15 +18,39 @@ public class ScoreHandler : MonoBehaviour
         set { score = value; }
     }
 
-    void Start()
+    public int NumberOfKeys
     {
-        scoreBoard = this.GetComponent<TextMeshProUGUI>();
-        scoreBoard.text = $"Key Found: {score}";
+        get { return numberOfKeys; }
     }
 
+    public void Awake()
+    {
+        scoreBoard = this.GetComponent<TextMeshProUGUI>();
+        SetScoreToScoreBoard();
+    }
+
+ 
     public void updateScore()
     {
         score += 1;
-        scoreBoard.text = $"Key Found: {score}";
+        SetScoreToScoreBoard();
+    }
+
+    public void SetScoreToScoreBoard()
+    {
+        scoreBoard.text = $"Key Found: {score} | Door is locked";
+        if (score == numberOfKeys)
+        {
+            scoreBoard.text = $"Key Found: {score} | Door is unlocked";
+        }
+    }
+
+    public void AreAllKeysFound()
+    {
+        Debug.Log("Numb : " + numberOfKeys + " " + score);
+        if (score == numberOfKeys)
+        {
+            SceneManager.LoadScene("Finish");
+        }
     }
 }

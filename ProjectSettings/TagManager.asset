@@ -10,14 +10,15 @@ TagManager:
   - Obstacle
   - Key
   - KeyPool
+  - Door
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - MiniMap
   - Water
   - UI
-  - 
+  - Map
   - 
   - 
   - 

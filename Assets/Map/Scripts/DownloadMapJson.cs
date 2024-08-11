@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
+
+//[ExecuteAlways]
+
 public class DownloadMapJson : MonoBehaviour
 {
     [Range(1, 5)]  private static int? mapNumber;
     public string downloadedMapData;
 
     public MapDataToObj mapData;
+    public LoadPregress loadFromFile; 
+
 
     public string mapDataUrl
     {
@@ -21,13 +26,22 @@ public class DownloadMapJson : MonoBehaviour
 
     private void Awake()
     {
-        mapNumber = Random.Range(1, 5);
-        if(mapNumber != null)
-            StartCoroutine(GetJsonData());
+
+        if (!loadFromFile.CheckTheLastSave())
+        { 
+            mapNumber = Random.Range(1, 5);
+            if (mapNumber != null)
+                StartCoroutine(GetJsonData());
+        }
     }
   
+   
 
-     IEnumerator GetJsonData()
+    void printGameSpec(string mapPath)
+    {
+        Debug.Log("Game Spec {\n Map Url : " + mapPath + "\nMap Array : " + downloadedMapData + "\n}");
+    }
+    IEnumerator GetJsonData()
      {
          using (UnityWebRequest request = UnityWebRequest.Get(mapDataUrl))
          {
@@ -40,8 +54,7 @@ public class DownloadMapJson : MonoBehaviour
              else
              {
                 downloadedMapData = request.downloadHandler.text;
-
-                Debug.Log("Game Spec {\n Map Url : " + mapDataUrl + "\nMap Array : " + downloadedMapData + "\n}");
+                printGameSpec(mapDataUrl);
                 mapData.CreateMap(downloadedMapData);
              }
          }

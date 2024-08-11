@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//[ExecuteAlways]
 public class MapDataToObj : MonoBehaviour
 {
-    private MapList mapObject; 
+    public MapList mapObject; 
 
     public GameObject floorTile;
     public GameObject wall;
@@ -20,17 +21,21 @@ public class MapDataToObj : MonoBehaviour
 
     private GameObject floorInstance;
 
-
+  
     public void CreateMap(string downloadedMap)
     {
         mapObject = new MapList(downloadedMap);
+        AssignThePoolToEachObject();
+        AddFloorTileToTheWorld();
+    }
+
+    void AssignThePoolToEachObject()
+    {
         ground = GameObject.FindWithTag("Ground");
         wallPool = GameObject.FindWithTag("Wall");
         obstaclePool = GameObject.FindWithTag("Obstacle");
         Keys = GameObject.FindWithTag("KeyPool");
-        player = GameObject.FindWithTag("Player"); 
-        mapObject.Print2DList();
-        AddFloorTileToTheWorld(); 
+        player = GameObject.FindWithTag("Player");
     }
     void AddMaterialToTheMap(int num, int row, int col)
     {
@@ -44,6 +49,7 @@ public class MapDataToObj : MonoBehaviour
                 break;
             case 2:
                 player.transform.position = new Vector3(col, 0.047f, row);
+                mapObject.ChangeMapElement(row, col, 0);
                 break;
             case 3:
                 InstantiateObject(key, Keys, row, 0.0657f, col);
@@ -82,9 +88,10 @@ public class MapDataToObj : MonoBehaviour
         else
             temp = Instantiate(prefab, new Vector3(xPosition, yPosition, zPosition), Quaternion.identity);
     }
-    // Update is called once per frame
-    void Update()
-    {
 
+    public void UpdateMap(Vector3 position, int newObj)
+    {
+        mapObject.ChangeMapElement((int)position.z, (int)position.x, newObj);
     }
+
 }

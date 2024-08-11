@@ -33,8 +33,8 @@ public class Drive : MonoBehaviour
         }
 
 
-        PlayerRotation();
-        AnimControl(translation);
+        float rotation = PlayerRotation();
+        AnimControl(translation, rotation);
 
 
     }
@@ -46,10 +46,13 @@ public class Drive : MonoBehaviour
         transform.Translate(0, 0, translation);
         return translation;
     }
-    void AnimControl(float translation)
+    void AnimControl(float translation, float rotation)
     {
-
-        if (translation > 0)
+        if (rotation !=0 && translation == 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (translation > 0)
         {
             anim.SetBool("isWalking", true);
             anim.SetFloat("direction", 1);
@@ -64,14 +67,11 @@ public class Drive : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
     }
-    void PlayerRotation()
+    float PlayerRotation()
     {
 
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
-      //  float horizontalRotation = mouseRotationSpeed * Input.GetAxis("Mouse X");
-      //  if (horizontalRotation != 0)
-          //  transform.Rotate(0, horizontalRotation, 0);
-      //  else
-            transform.Rotate(0, rotation, 0);
+        transform.Rotate(0, rotation, 0);
+        return rotation;
     }
 }
