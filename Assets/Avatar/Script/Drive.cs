@@ -68,10 +68,10 @@ public class Drive : MonoBehaviour
     {
 
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed * Time.deltaTime;
-        float horizontalRotation = mouseRotationSpeed * Input.GetAxis("Mouse X");
-        if (horizontalRotation != 0)
-            transform.Rotate(0, horizontalRotation, 0);
-        else
+      //  float horizontalRotation = mouseRotationSpeed * Input.GetAxis("Mouse X");
+      //  if (horizontalRotation != 0)
+          //  transform.Rotate(0, horizontalRotation, 0);
+      //  else
             transform.Rotate(0, rotation, 0);
     }
 }
