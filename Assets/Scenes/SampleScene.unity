@@ -210,8 +210,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6213226, y: 1.8106022, z: 0.44423702}
-  m_Center: {x: -0.059015103, y: 0.92107034, z: 0.02653526}
+  m_Size: {x: 0.6213226, y: 1.7939284, z: 0.44423702}
+  m_Center: {x: -0.059015103, y: 0.92940724, z: 0.02653526}
 --- !u!1001 &682902854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
   wall: {fileID: 7024941748995281441, guid: 63484e60bd66ea642b02b4890ee5e272, type: 3}
   obstacle: {fileID: 1296798448712754389, guid: 440bbf61f80155046b638910c8ad5a4c, type: 3}
   key: {fileID: 374289202576707483, guid: bbf4888c58ac1cd4f922df8564747fef, type: 3}
-  door: {fileID: 1371647732391088, guid: d4718fd25ff9fc64a820d539bfe490fd, type: 3}
+  door: {fileID: 1371647732391088, guid: 6c8030a5f867a064d931ea1e16772145, type: 3}
   player: {fileID: 4539220209187437891, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
 --- !u!1 &1619068376
 GameObject:
