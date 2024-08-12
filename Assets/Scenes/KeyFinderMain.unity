@@ -1067,45 +1067,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1623821427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623821422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f06aa8ececd32f49aab07cd460f1635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!54 &1623821428
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1623821422}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1659909393
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1251,22 @@ PrefabInstance:
     - target: {fileID: 186020278706581507, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -189.29543
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270703170172662865, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7567785
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270703170172662865, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7939286
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270703170172662865, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
+      propertyPath: m_Center.x
+      value: -0.060900155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270703170172662865, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
+      propertyPath: m_Center.z
+      value: 0.026535263
       objectReference: {fileID: 0}
     - target: {fileID: 2896852103777239622, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
       propertyPath: m_UiScaleMode
@@ -1562,12 +1539,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 754256070851425265, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1623821426}
-    - targetCorrespondingSourceObject: {fileID: 754256070851425265, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1623821427}
-    - targetCorrespondingSourceObject: {fileID: 754256070851425265, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1623821428}
   m_SourcePrefab: {fileID: 100100000, guid: 81319563f8d7078408d0fc7ac2956cbe, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
