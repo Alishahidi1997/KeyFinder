@@ -1,5 +1,9 @@
 # KeyFinder
 
+ ## Demo
+![](https://github.com/Alishahidi1997/KeyFinder/blob/main/Assets/Demo.gif)
+
+
 ## Design Approach
 
 ## Player Control and Solving the puzzle
