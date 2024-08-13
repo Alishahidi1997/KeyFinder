@@ -18,8 +18,10 @@
  - A class for loading the map from the last checkpoint. 
 
 #### Player Control
- - A class for controlling the player movement. 
+ - A class for controlling the player movement.
+ - A class for detecting the collision with different types of objects
 
+#### Score Handler
  - A class for handling the score based on the collider in the objects. 
 
 
