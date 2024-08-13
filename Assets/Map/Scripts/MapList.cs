@@ -69,14 +69,15 @@ public class MapList
     {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.Append("[");
+        MapArray[0][0] = 1;
         foreach (List<int> row in MapArray)
         {
             stringBuilder.Append("[");
             for (int i = 0; i < row.Count; i++)
             {
+                
                 stringBuilder.Append(row[i]);
 
-                // Add a comma between elements, but not after the last one
                 if (i < row.Count - 1)
                 {
                     stringBuilder.Append(", ");
@@ -87,6 +88,7 @@ public class MapList
         }
         stringBuilder.Append("]");
         map = stringBuilder.ToString();
+        
     }
 
 public void Print2DList()

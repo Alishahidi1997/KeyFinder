@@ -40,17 +40,12 @@ public class ScoreHandler : MonoBehaviour
     {
         scoreBoard.text = $"Key Found: {score} | Door is locked";
         if (score == numberOfKeys)
-        {
             scoreBoard.text = $"Key Found: {score} | Door is unlocked";
-        }
     }
 
     public void AreAllKeysFound()
     {
-        Debug.Log("Numb : " + numberOfKeys + " " + score);
         if (score == numberOfKeys)
-        {
             SceneManager.LoadScene("Finish");
-        }
     }
 }

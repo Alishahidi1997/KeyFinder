@@ -17,7 +17,6 @@ public class Drive : MonoBehaviour
         playerRigidBody = this.GetComponent<Rigidbody>(); 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -52,17 +51,17 @@ public class Drive : MonoBehaviour
         {
             anim.SetBool("isWalking", true);
         }
-        else if (translation > 0)
+        if (translation > 0)
         {
             anim.SetBool("isWalking", true);
             anim.SetFloat("direction", 1);
         }
-        else if (translation < 0)
+        if (translation < 0)
         {
             anim.SetBool("isWalking", true);
             anim.SetFloat("direction", -1);
         }
-        else
+        if(rotation == 0 && translation == 0)
         {
             anim.SetBool("isWalking", false);
         }
