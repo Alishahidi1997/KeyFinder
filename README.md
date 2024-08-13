@@ -37,3 +37,4 @@ Save Feature: The game automatically saves when a key is found. If the player ex
 
 ## Details on how to compile and run the project.
 After downloading the project, be sure to download the Avatar.fbx file before opening the project. Place the Avatar file in the \Assets\Avatar\Avatar directory. Once done, you can open the project in Unity and enjoy it.
+Other solution: run the .exe file in WindowsBuild/KeyFinder.exe
