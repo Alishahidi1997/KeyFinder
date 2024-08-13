@@ -6,7 +6,7 @@ public class Drive : MonoBehaviour
 {
     float speed = 1.0f;
     float rotationSpeed = 100.0f;
-    float mouseRotationSpeed = 2.0f;
+
 
     Animator anim;
     Rigidbody playerRigidBody; 

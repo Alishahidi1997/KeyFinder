@@ -65,14 +65,19 @@ public class MapDataToObj : MonoBehaviour
         }
     }
 
+    void AddFloorAndRoof(float i, float y, float j, string floorType)
+    {
+        floorInstance = Instantiate(floorTile, new Vector3(j, y, i), Quaternion.identity, ground.transform);
+        floorInstance.transform.name = $"{floorType}({j},{i})";
+
+    }
     void AddFloorTileToTheWorld()
     {
         for(int i = 0; i < mapObject.MapArray.Count; i++ )
             for(int j = 0; j < mapObject.MapArray[i].Count; j++)
             {
-                floorInstance = Instantiate(floorTile, new Vector3(j, 0, i), Quaternion.identity, ground.transform);
-                floorInstance.transform.name = $"Floor({j},{i})";
-                
+                AddFloorAndRoof(i, 0, j, "Floor");
+                AddFloorAndRoof(i, 1.39f, j, "Roof");
                 AddMaterialToTheMap(mapObject.MapArray[i][j], i, j);
             }
     }
