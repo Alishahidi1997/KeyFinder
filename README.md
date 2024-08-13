@@ -1,7 +1,7 @@
 # KeyFinder
 
  ## Demo
-![](https://github.com/Alishahidi1997/KeyFinder/blob/main/Assets/Demo.gif)
+![](https://github.com/Alishahidi1997/KeyFinder/blob/main/Assets/KeyFinder.gif)
 
 ## Design Approach
 ### Classes
